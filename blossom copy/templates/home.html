@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <style>
+    body {
+      padding-bottom: 40px;
+      background: url("http://www.lovethisgif.com/uploaded_images/105401-Falling-Leaves-Gif-Falling-Autumn-Leaves-Background-Loop-2-read-Desc-....gif");
+      background-size:cover;
+      background-attachment: fixed;
+    }
+
+    .containerHome {
+      background-color: rgba(255, 255, 255, .7);
+    	width:70%;
+    	margin: 70px auto;
+    	overflow:auto;
+    	border: 1px black solid;
+    }
+
+    .jumbotron {
+      padding: 30px;
+      margin-top: 40px;
+      color: inherit;
+      background-color: #eee
+    }
+
+    .form-signin {
+      max-width: 330px;
+      padding: 15px;
+      margin: 0 auto;
+    }
+
+    .form-signin .form-signin-heading {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .form-signin .checkbox {
+      margin-bottom: 10px;
+    }
+
+    .form-signin .checkbox {
+      font-weight: normal;
+    }
+
+    .form-signin .form-control {
+      position: relative;
+      height: auto;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .form-signin .form-control:focus {
+      z-index: 2;
+    }
+
+    .form-signin input[type="email"] {
+      margin-bottom: -1px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .form-signin input[type="password"] {
+      margin-bottom: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    .signup {
+      text-align: center;
+    }
+
+    .forgot {
+      text-align: center;
+    }
+  </style>
+  <div class="jumbotron text-center">
+    <h1>Welcome to Blossom <img src="/static/blossomHead.png" width="100px"></h1>
+
+    {% if error %}
+      <p class="error"><strong>Error:</strong> {{ error }}
+    {% endif %}
+    <h3>Start Your Garden Here</h3>
+  </div>
+  <div class="containerHome">
+      <form class="form-signin" role="form" method="post" action="" accept-charset="UTF-8" id="login-nav">
+        <div class="form-group">
+          <label for="inputName" class="sr-only">Name</label>
+          <input type="name" name="name" class="form-control" placeholder="Name" value={{request.form.name}}>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" name="password" class="form-control" placeholder="Password" value={{request.form.password}}>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember Me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
+      </form>
+      <p class="signup">Don't have an account? <a href="/register"> Sign Up </a></p>
+      <p class="signup"><a href="/forgot"> Forgot your password? </a></p>
+    </div> <!-- /container -->
+{% endblock %}

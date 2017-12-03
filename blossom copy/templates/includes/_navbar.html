@@ -1,0 +1,48 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img src="/static/blossom.png" width = "80px" class="logo"></a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/faq">FAQ</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://www.facebook.com/"><img src="https://image.flaticon.com/icons/png/512/124/124010.png" width="25px"></a></li>
+        <li><a href="https://www.twitter.com/"><img src="http://pluspng.com/img-png/raunr7ow6f45t-oqr-afdc4tosutyax0vqeee4yggkl52toe9wgy6kbtglahiexgzvq-w300-300.png" width="25px"></a></li>
+        <li><a href="mailto:darkrai_79@yahoo.com"><img src="/static/mail.png" width="25px"></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>

@@ -1,0 +1,115 @@
+{% extends 'layoutLogged.html' %}
+
+{% block body %}
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <h1 class="page-header">Dashboard: <small> Welcome {{session.name}}</small></h1>
+      <br>
+      <div class="row placeholders">
+        <div class="col-xs-6 col-sm-3 placeholder">
+          <a href="/dashboard"><img src="https://lh3.googleusercontent.com/sJI7rDGa24vkvDaFRS6aEoTMqfYEDl5iTWwbr1agF6C3UJ0ZFhlw3r070QpvkaMukg=w300" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+          <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Play a game!</h4>
+        </div>
+        <div class="col-xs-6 col-sm-3 placeholder">
+          <a href="/quiz"><img src="http://www.legaltracksoftware.com/wp-content/uploads/2015/09/task.png" width="300" height="500" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+          <h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Test your skills!</h4>
+        </div>
+        <div class="col-xs-6 col-sm-3 placeholder">
+          <a href="/aboutLogged"><img src="http://freevector.co/wp-content/uploads/2010/01/54282-writing-tools-symbol-of-interface-with-black-square-paper-note-and-a-pencil.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+          <h4>Learn About Us!</h4>
+        </div>
+        <div class="col-xs-6 col-sm-3 placeholder">
+          <a href="/faqLogged"><img src="http://clipartix.com/wp-content/uploads/2016/08/Questions-mark-clipart-clipart.png" width="120" height="120" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+          <h4>Any Questions?</h4>
+        </div>
+      </div>
+      <br>
+      <h2 class="sub-header">Daily Tasks</h2>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Tasks</th>
+                <th>Done</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Drink 8 cups of Water</td>
+                <td><select>
+                  <option value="">x</option>
+                  <option value="">✓</option>
+                </select></td>
+              </tr>
+              <tr>
+                <td >Meet Max (son) for Brunch</td>
+                <td><select>
+                  <option value="">x</option>
+                  <option value="">✓</option>
+                </select></td>
+              </tr>
+              <tr>
+                <td>Eat an Apple</td>
+                <td><select>
+                  <option value="">x</option>
+                  <option value="">✓</option>
+                </select></td>
+              </tr>
+              <tr>
+                <td>Walk Charlie (the dog)</td>
+                <td><select>
+                  <option value="">x</option>
+                  <option value="">✓</option>
+                </select></td>
+              </tr>
+              <tr>
+                <td>Take Vitamins</td>
+                <td><select>
+                  <option value="">x</option>
+                  <option value="">✓</option>
+                </select></td>
+              </tr>
+              <tr>
+                <td>Go to the market with Amanda</td>
+                <td><select>
+                  <option value="">x</option>
+                  <option value="">✓</option>
+                </select></td>
+              </tr>
+              <tr>
+                <td>Pick up Alex (grandson) from school </td>
+                <td><select>
+                  <option value="">x</option>
+                  <option value="">✓</option>
+                </select></td>
+              </tr>
+              <tr>
+                <td>Clean Shoe</td>
+                <td><select>
+                  <option value="">x</option>
+                  <option value="">✓</option>
+                </select></td>
+              </tr>
+              <tr>
+                <td>Deposit Check</td>
+                <td><select>
+                  <option value="">x</option>
+                  <option value="">✓</option>
+                </select></td>
+              </tr>
+              <tr>
+                <td>Return Shirt</td>
+                <td><select>
+                  <option value="">x</option>
+                  <option value="">✓</option>
+                </select></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

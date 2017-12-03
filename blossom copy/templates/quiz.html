@@ -1,0 +1,258 @@
+{% extends 'layoutLogged.html' %}
+
+{% block body %}
+  <style media="screen">
+    html {
+      font-family: sans-serif;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%
+    }
+
+    body{
+      font-family:"helvetica", sans-serif;
+      font-size:15px;
+      line-height: 1.6em;
+      background:#f4f4f4;
+      background: url("http://www.lovethisgif.com/uploaded_images/105401-Falling-Leaves-Gif-Falling-Autumn-Leaves-Background-Loop-2-read-Desc-....gif");
+      background-size: 100%;
+      background-attachment: fixed;
+      font-size: 1.5em;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 6px 12px;
+      margin-bottom: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.42857143;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background-image: none;
+      border: 1px solid black;
+      border-radius: 4px;
+      margin-left: 30px;
+    }
+
+    li{
+      list-style:none;
+    }
+
+    header{
+      overflow:auto;
+    }
+
+    .contain {
+      background-color: rgba(255, 255, 255, .9);
+      width:80%;
+      margin: auto;
+      margin-top: 70px;
+      padding-top: 20px;
+      padding: 20px;
+      overflow:auto;
+      border: 1px black solid;
+    }
+
+    .pull-left{
+      font-family: sans-serif;
+      margin: .67em 0;
+      font-size: 2em;
+      font-weight: 500;
+      line-height: 1.1;
+      text-align: center;
+    }
+
+    .pull-right{
+      float:right;
+      font-family: sans-serif;
+      margin: 2em 0;
+      font-size: 1em;
+      font-weight: 500;
+      line-height: 1.1;
+    }
+
+    @media only screen and (max-width: 900px){
+      .contain{
+        width:90%;
+      }
+    }
+
+  </style>
+  <div class="contain">
+    <header>
+      <div class="pull-left"><h1>Blossom Quiz Application</h1></div>
+    </header>
+    <main>
+      <form class="questionForm" id="q1" data-question="1">
+        <p>Progress: 0 of 5 Questions Completed </p>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"><span class="sr-only">1% Complete</span></div>
+        </div>
+        <h3>How many siblings do you have?</h3>
+        <ul>
+          <p></p>
+          <li><input name="q1" type="radio" value="a" /> 1 </li>
+          <p></p>
+          <li><input name="q1" type="radio" value="b" /> 2 </li>
+          <p></p>
+          <li><input name="q1" type="radio" value="c" /> 3 </li>
+          <p></p>
+          <li><input name="q1" type="radio" value="d" /> 4 </li>
+        </ul>
+        <button class="btn btn-lg btn-default" id="submit">Submit</button>
+      </form>
+
+      <form class="questionForm" id="q2" data-question="2">
+        <br>
+        <p>Progress: 1 of 5 Questions Completed </p>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"><span class="sr-only">20% Complete</span></div>
+        </div>
+        <h3>What's your name?</h3>
+        <ul>
+          <p></p>
+          <li><input name="q2" type="radio" value="a" /> Nikhil </li>
+          <p></p>
+          <li><input name="q2" type="radio" value="b" /> Dominique </li>
+          <p></p>
+          <li><input name="q2" type="radio" value="c" /> Naiya </li>
+          <p></p>
+          <li><input name="q2" type="radio" value="d" /> Larry </li>
+        </ul>
+        <button class="btn btn-lg btn-default" id="submit">Submit</button>
+      </form>
+
+      <form class="questionForm" id="q3" data-question="3">
+        <br>
+        <p>Progress: 2 of 5 Questions Completed </p>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"><span class="sr-only">40% Complete</span></div>
+        </div>
+
+        <h3>Which do you do first?</h3>
+        <ul>
+          <p></p>
+          <li><input name="q3" type="radio" value="a" /> Go to Work </li>
+          <p></p>
+          <li><input name="q3" type="radio" value="b" /> Visit Grandchildren </li>
+          <p></p>
+          <li><input name="q3" type="radio" value="c" /> Eat Breakfast </li>
+          <p></p>
+          <li><input name="q3" type="radio" value="d" /> Go Shopping </li>
+        </ul>
+        <button class="btn btn-lg btn-default" id="submit">Submit</button>
+      </form>
+
+      <form class="questionForm" id="q4" data-question="4">
+        <br>
+        <p>Progress: 3 of 5 Questions Completed </p>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60% Complete</span></div>
+        </div>
+        <h3>What song did you have associated with: 'Go to Work'?</h3>
+        <ul>
+          <p></p>
+          <li><input name="q4" type="radio" value="a" /> HUMBLE </li>
+          <p></p>
+          <li><input name="q4" type="radio" value="b" /> Despacito </li>
+          <p></p>
+          <li><input name="q4" type="radio" value="c" /> Call Me Maybe </li>
+          <p></p>
+          <li><input name="q4" type="radio" value="d" /> Versace on the Floor </li>
+        </ul>
+        <button class="btn btn-lg btn-default" id="submit">Submit</button>
+      </form>
+
+      <form class="questionForm" id="q5" data-question="5">
+        <br>
+        <p>Progress: 4 of 5 Questions Completed </p>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"><span class="sr-only">80% Complete</span></div>
+        </div>
+        <h3>What time did you have to: 'Go to Work'?</h3>
+        <ul>
+          <p></p>
+          <li><input name="q5" type="radio" value="a" /> 6:00 AM </li>
+          <p></p>
+          <li><input name="q5" type="radio" value="b" /> 9:00 PM </li>
+          <p></p>
+          <li><input name="q5" type="radio" value="c" /> 5:00 PM </li>
+          <p></p>
+          <li><input name="q5" type="radio" value="d" /> 10:00 PM </li>
+        </ul>
+        <button class="btn btn-lg btn-default" id="submit">Submit</button>
+      </form>
+
+      <div id="results"></div>
+    </main>
+    <div class="pull-left">Total: 5 Questions</div>
+    <div class="pull-right">Copyright &copy 2017, Blossom </div>
+  </div>
+  <script src="{{url_for('static', filename='jquery.js')}}"></script>
+  <script>
+    var score = 0; //Set score to 0
+    var total = 5; //Total number of questions
+    var point = 1; //Points per correct answer
+    var highest = total * point;
+
+    //Initializer
+    function init(){
+    	//set correct answers
+    	sessionStorage.setItem('a1','b');
+    	sessionStorage.setItem('a2','d');
+    	sessionStorage.setItem('a3','c');
+    	sessionStorage.setItem('a4','a');
+    	sessionStorage.setItem('a5','b');
+    }
+
+    $(document).ready(function(){
+    	//Hide all questions
+    	$('.questionForm').hide();
+
+    	//Show first question
+    	$('#q1').show();
+
+    	$('.questionForm #submit').click(function(){
+    		//Get data attributes
+    		current = $(this).parents('form:first').data('question');
+    		next = $(this).parents('form:first').data('question')+1;
+    		//Hide all questions
+    		$('.questionForm').hide();
+    		//Show next question
+    		$('#q'+next+'').fadeIn(300);
+    		process(''+current+'');
+    		return false;
+    	});
+    });
+
+    //Process the answers
+    function process(n){
+    	//Get input value
+    	var submitted = $('input[name=q'+n+']:checked').val();
+    	if(submitted == sessionStorage.getItem('a'+n+'')){
+    			score = score + point;
+    	}
+
+    	if (n == total) {
+    		$ ('#results').html('<h3>Your final score is: '+score+' out of '+highest+'</h3><br><a href="/quiz">Take Quiz Again</a><p></p>');
+    		if(score == highest){
+    			$('#results').append('<p>Perfect!');
+    		} else if (score == highest - point || score == highest - point - point) {
+    			$('#results').append('<p>Good Job!');
+    		} else {
+    			$('#results').append('<p>You could do better. Try again!');
+    		}
+    	}
+    	return false;
+    }
+
+    //Add event listener
+    window.addEventListener('load',init,false);
+  </script>
+{% endblock %}
